@@ -18,7 +18,8 @@ RUN buildDeps="sudo make gcc g++ libc-dev" \
  && rm -rf /var/lib/apt/lists/* \
  && rm -rf /tmp/* /var/tmp/* /usr/lib/ruby/gems/*/cache/*.gem
 
-COPY fluent.conf /fluentd/etc/
+COPY log/access_log /var/log/wowhoneypod/access_log
+COPY wowhoneypot.conf /etc/td-agent/conf.d
 COPY entrypoint.sh /bin/
 
 RUN gem install fluent-plugin-bigquery

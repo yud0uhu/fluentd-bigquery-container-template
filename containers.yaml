@@ -1,0 +1,6 @@
+version: v1beta1
+containers:
+  - name: wowhoneypot-log-stack
+    image: fluentd-bigquery
+ # プロセスを実行する
+ command: ['fluentd -c /etc/td-agent/conf.d']
