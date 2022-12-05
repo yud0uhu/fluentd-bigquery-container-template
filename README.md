@@ -9,7 +9,7 @@ $ docker build -t fluentd-bigquery .
 ## run docker container
 
 ```sh
-$ docker run --rm -it -p 24224:24224/tcp -p 5140:5140/tcp fluentd-bigquery:latest
+$ docker run --rm -it -p 24224:24224/tcp -p 5140:5140/tcp fluentd-bigquery:latest /bin/sh
 ```
 
 ## using docker image
